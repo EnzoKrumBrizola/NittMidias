@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitt | Marketing Digital & Social Media</title>
+<meta name="description" content="A Nitt é um hub de estratégia digital: harmonização de redes sociais, social media e projetos especiais para marcas, empreendedores e profissionais liberais.">
+<meta name="theme-color" content="#0A2540">
+<meta property="og:title" content="Nitt | Marketing Digital & Social Media">
+<meta property="og:description" content="Sua presença digital com estratégia, estética e direção profissional.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --escuro:#0A2540; --medio:#1B5FAA; --claro:#CFE6F7; --gelo:#EEF6FC; --branco:#FFFFFF; --texto:#1C3350;
+  --titulo:'Bricolage Grotesque',Georgia,sans-serif; --corpo:'DM Sans',system-ui,sans-serif;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--corpo);color:var(--texto);background:var(--branco);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--titulo);color:var(--escuro);line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:14px}
+h3{font-size:1.3rem;margin-bottom:10px}
+section{padding:96px 0}
+.sub{max-width:56ch;color:#4A6280;margin-bottom:48px}
+.btn{display:inline-block;background:var(--escuro);color:var(--branco);text-decoration:none;font-weight:700;padding:15px 28px;border-radius:999px;transition:background .2s}
+.btn:hover{background:var(--medio)}
+.btn.claro{background:var(--branco);color:var(--escuro)}
+.btn.claro:hover{background:var(--claro)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--medio);outline-offset:3px}
+
+/* topo */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--claro)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav img{height:34px}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem}
+.nav ul a:not(.btn):hover{color:var(--medio)}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+.menu{display:none;background:none;border:0;font-size:1.8rem;color:var(--escuro);cursor:pointer}
+
+/* hero */
+.hero{background:var(--gelo);padding:72px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero small{display:block;font-weight:500;color:var(--medio);margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);margin-bottom:22px}
+.hero p{max-width:46ch;margin-bottom:34px;font-size:1.12rem}
+.hero figure{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:var(--claro);overflow:hidden}
+.hero figure img{width:100%;height:100%;object-fit:cover}
+
+/* sobre */
+.sobre .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.sobre figure{aspect-ratio:1;background:var(--claro);border-radius:24px;overflow:hidden}
+.sobre figure img{width:100%;height:100%;object-fit:cover}
+.sobre p{margin-bottom:18px}
+.num{display:flex;gap:28px;align-items:center;margin:30px 0;padding:24px 0;border-block:1px solid var(--claro)}
+.num b{font-family:var(--titulo);font-size:3.2rem;color:var(--medio);line-height:1;white-space:nowrap}
+.num ul{list-style:none;color:#4A6280}
+.valores{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:2px solid var(--escuro)}
+.valores div{padding:28px 28px 0 0}
+.valores div+div{padding-left:28px;border-left:1px solid var(--claro)}
+.valores p{color:#4A6280}
+.comeco{margin-top:56px;background:var(--escuro);color:var(--branco);border-radius:24px;padding:36px 40px;display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+.comeco h3{color:var(--branco);margin:0 0 4px}
+.comeco p{color:var(--claro)}
+
+/* serviços */
+.servicos{background:var(--escuro);color:var(--branco)}
+.servicos h2{color:var(--branco)}
+.servicos .sub{color:var(--claro)}
+.pilar{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;padding:36px 0;border-top:1px solid rgba(207,230,247,.28)}
+.pilar h3{color:var(--branco);font-size:1.6rem}
+.pilar span{display:block;color:var(--claro);font-size:.92rem;margin-bottom:6px}
+.pilar ul{list-style:none;columns:2;column-gap:32px}
+.pilar li{padding:6px 0 6px 22px;position:relative;break-inside:avoid}
+.pilar li::before{content:"";position:absolute;left:0;top:.95em;width:10px;height:2px;background:var(--claro)}
+.pilar>div>p{color:var(--claro);margin-bottom:12px}
+
+/* público */
+.perfis{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.perfil{background:var(--gelo);border-radius:20px;padding:32px}
+.perfil:nth-child(2){background:var(--claro)}
+.perfil p{color:#3F5878}
+.chamada{margin-top:40px;font-size:1.15rem}
+.chamada a{color:var(--medio);font-weight:700}
+
+/* portfólio */
+.portfolio{background:var(--gelo)}
+.pf-topo{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:40px}
+.stats{display:flex;gap:40px}
+.stats b{display:block;font-family:var(--titulo);font-size:2.4rem;color:var(--medio);line-height:1}
+.stats span{font-size:.9rem;color:#4A6280}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:16px}
+.grade figure{background:var(--claro);border-radius:18px;overflow:hidden}
+.grade figure:nth-child(1),.grade figure:nth-child(4){grid-row:span 2}
+.grade img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.grade figure:hover img{transform:scale(1.04)}
+.sem-img{visibility:hidden}
+
+/* processo */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p}
+.passo{padding:0 28px 0 0;position:relative}
+.passo+.passo{padding-left:28px;border-left:1px solid var(--claro)}
+.passo b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--escuro);color:var(--branco);font-family:var(--titulo);margin-bottom:18px}
+.passo p{color:#4A6280;font-size:.97rem}
+
+/* cta */
+.cta{background:var(--medio);color:var(--branco);text-align:center}
+.cta h2{color:var(--branco)}
+.cta p{max-width:52ch;margin:0 auto 32px;color:var(--gelo)}
+.cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta .btn:not(.claro){background:var(--escuro)}
+.cta .btn:not(.claro):hover{background:#06182B}
+
+footer{background:#06182B;color:var(--claro);padding:40px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:30px}
+
+.zap{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.zap svg{width:30px;height:30px;fill:#fff}
+
+/* animação única: entrada do hero */
+@keyframes entra{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .wrap>*{animation:entra .8s ease both}
+.hero .wrap>*:nth-child(2){animation-delay:.15s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+
+@media (max-width:900px){
+  section{padding:68px 0}
+  .menu{display:block}
+  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--branco);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--claro)}
+  .nav ul.aberto{display:flex}
+  .hero .wrap,.sobre .wrap,.pilar{grid-template-columns:1fr}
+  .hero figure{max-width:380px;border-radius:160px 160px 24px 24px}
+  .sobre figure{max-width:380px}
+  .valores,.perfis,.passos{grid-template-columns:1fr}
+  .valores div+div,.passo+.passo{padding-left:0;border-left:0;border-top:1px solid var(--claro);margin-top:24px;padding-top:24px}
+  .grade{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .pilar ul{columns:1}
+  .num{flex-direction:column;align-items:start;gap:12px}
+}
+@media (max-width:520px){.grade{grid-template-columns:1fr}.grade figure:nth-child(n){grid-row:auto}.stats{gap:24px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" aria-label="Nitt, início"><img src="assets/img/logo-nitt.png" alt="Nitt"></a>
+    <button class="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <ul id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#publico">Para quem</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#processo">Como funciona</a></li>
+      <li><a class="btn" href="https://wa.me/554792929390" target="_blank" rel="noopener">Conversar sobre meu projeto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <small>Marketing Digital &amp; Social Media</small>
+      <h1>Sua presença digital com estratégia, estética e direção profissional</h1>
+      <p>Comunicação clara e estratégica para crescer com consistência no digital.</p>
+      <a class="btn" href="https://wa.me/554792929390" target="_blank" rel="noopener">Conversar sobre meu projeto</a>
+    </div>
+    <figure><img src="assets/img/hero.jpg" alt="Trabalho de estratégia e design digital da Nitt" width="800" height="1000"></figure>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap">
+    <figure><img src="assets/img/sobre-nitt.jpg" alt="Fundadora da Nitt" width="800" height="800" loading="lazy"></figure>
+    <div>
+      <h2>Sobre a Nitt</h2>
+      <p>A Nitt nasceu da experiência de mais de 10 anos atuando com comunicação, marketing, gestão e desenvolvimento de pessoas. Hoje, atua como um hub de estratégia digital, ajudando empresas, profissionais e projetos a construírem uma presença online clara, organizada e alinhada aos seus objetivos.</p>
+      <p>Com uma visão que une posicionamento, conteúdo, estética e relacionamento, desenvolvemos estratégias personalizadas para fortalecer marcas, gerar crescimento sustentável e criar conexões reais entre negócios, pessoas e comunidades.</p>
+      <div class="num">
+        <b>+ 10 anos</b>
+        <ul>
+          <li>Experiência no digital</li>
+          <li>Social Media &amp; Marketing Digital</li>
+          <li>Estratégia e Posicionamento</li>
+          <li>Comunicação Institucional e Empresarial</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="valores" style="grid-column:1/-1">
+      <div><h3>Visão Estratégica</h3><p>Conteúdos pensados para gerar resultado, não apenas presença.</p></div>
+      <div><h3>Estética Refinada</h3><p>Visual que posiciona sua marca com profissionalismo.</p></div>
+      <div><h3>Comunicação Humana</h3><p>Mensagens que conectam e facilitam a decisão.</p></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="comeco" style="width:100%">
+      <div><h3>Não sabe por onde começar?</h3><p>A Nitt ajuda você a encontrar a melhor estrutura para o seu momento.</p></div>
+      <a class="btn claro" href="https://wa.me/554792929390" target="_blank" rel="noopener">Falar com a Nitt</a>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <h2>Nossos Serviços</h2>
+    <p class="sub">Soluções personalizadas para cada fase da sua jornada digital.</p>
+
+    <div class="pilar">
+      <div><span>Pilar 1</span><h3>Harmonização de Redes Sociais</h3></div>
+      <div><p>Organização completa da sua base digital:</p>
+        <ul><li>Bio estratégica</li><li>Identidade visual</li><li>Destaques organizados</li><li>Perfil otimizado para conversão</li></ul></div>
+    </div>
+    <div class="pilar">
+      <div><span>Pilar 2</span><h3>Social Media &amp; Tráfego Orgânico</h3></div>
+      <div><p>Gestão estratégica das suas redes com:</p>
+        <ul><li>Criação de conteúdo</li><li>Calendário editorial</li><li>Estratégias de engajamento para crescimento orgânico real e sustentável</li></ul></div>
+    </div>
+    <div class="pilar">
+      <div><span>Pilar 3</span><h3>Projetos Especiais</h3></div>
+      <div><p>Conteúdos estratégicos para momentos especiais:</p>
+        <ul><li>Lançamentos</li><li>Campanhas sazonais</li><li>Rebranding digital ou ações personalizadas para o seu negócio</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="publico">
+  <div class="wrap">
+    <h2>Para quem é a Nitt?</h2>
+    <p class="sub">Três perfis que mais se beneficiam de uma presença digital bem estruturada.</p>
+    <div class="perfis">
+      <div class="perfil"><h3>Pequenos Empreendedores</h3><p>Negócios em fase inicial que precisam estruturar sua presença digital do zero, de forma organizada e profissional.</p></div>
+      <div class="perfil"><h3>Médios Empreendedores</h3><p>Negócios já consolidados que precisam dar o próximo passo na comunicação e fortalecer sua marca no digital.</p></div>
+      <div class="perfil"><h3>Profissionais Liberais</h3><p>Médicos, advogados, consultores e outros profissionais que desejam construir autoridade por meio de uma marca pessoal consistente.</p></div>
+    </div>
+    <p class="chamada"><a href="https://wa.me/554792929390" target="_blank" rel="noopener">Se você se identificou com algum desses perfis, a Nitt pode te ajudar.</a></p>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="pf-topo">
+      <div>
+        <h2>A Nitt já fez, já entregou, já tem história</h2>
+        <p class="sub" style="margin:0">Marcas que confiaram na Nitt para estruturar sua presença digital.</p>
+      </div>
+      <div class="stats">
+        <div><b>+50</b><span>Marcas atendidas</span></div>
+        <div><b>+10</b><span>Anos de experiência</span></div>
+        <div><b>100%</b><span>Dedicação aos projetos</span></div>
+      </div>
+    </div>
+    <h3 style="margin-bottom:6px">Resultados na prática</h3>
+    <p class="sub" style="margin-bottom:28px">Visual, estratégia e posicionamento aplicados na prática.</p>
+    <div class="grade">
+      <figure><img src="assets/img/portfolio-01.jpg" alt="Projeto 1 da Nitt" loading="lazy"></figure>
+      <figure><img src="assets/img/portfolio-02.jpg" alt="Projeto 2 da Nitt" loading="lazy"></figure>
+      <figure><img src="assets/img/portfolio-03.jpg" alt="Projeto 3 da Nitt" loading="lazy"></figure>
+      <figure><img src="assets/img/portfolio-04.jpg" alt="Projeto 4 da Nitt" loading="lazy"></figure>
+      <figure><img src="assets/img/portfolio-05.jpg" alt="Projeto 5 da Nitt" loading="lazy"></figure>
+      <figure><img src="assets/img/portfolio-06.jpg" alt="Projeto 6 da Nitt" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="processo">
+  <div class="wrap">
+    <h2>Como Funciona</h2>
+    <p class="sub">Um processo simples e transparente para transformar sua presença digital.</p>
+    <div class="passos">
+      <div class="passo"><b>1</b><h3>Diagnóstico</h3><p>Análise completa da sua situação atual e entendimento dos seus objetivos e necessidades.</p></div>
+      <div class="passo"><b>2</b><h3>Proposta Personalizada</h3><p>Criação de um plano sob medida, com estratégias e ações específicas para o seu negócio.</p></div>
+      <div class="passo"><b>3</b><h3>Execução</h3><p>Implementação de todas as ações planejadas com qualidade e atenção aos detalhes.</p></div>
+      <div class="passo"><b>4</b><h3>Acompanhamento</h3><p>Suporte contínuo e ajustes necessários para garantir os melhores resultados.</p></div>
+    </div>
+    <p style="margin-top:48px"><a class="btn" href="https://wa.me/554792929390" target="_blank" rel="noopener">Conversar sobre meu projeto</a></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Vamos organizar sua presença digital?</h2>
+    <p>Se você sente que sua comunicação não reflete a qualidade do seu trabalho, a Nitt pode ajudar a estruturar isso com estratégia e clareza.</p>
+    <div class="btns">
+      <a class="btn claro" href="https://wa.me/554792929390" target="_blank" rel="noopener">Conversar sobre meu projeto</a>
+      <a class="btn" href="https://www.instagram.com/nitt.midias/" target="_blank" rel="noopener">Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/img/logo-nitt-branco.png" alt="Nitt">
+    <span>&copy; <span id="ano">2026</span> Nitt. Todos os direitos reservados.</span>
+    <a href="https://www.instagram.com/nitt.midias/" target="_blank" rel="noopener">@nitt.midias</a>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/554792929390" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.100 1 2 1.300 2.300 1.400.3.100.4.100.6-.1l.8-1c.2-.3.4-.2.600-.1l1.900.9c.3.1.5.2.6.3.1.2.1.8-.1 1.500z"/></svg>
+</a>
+
+<script>
+const btn=document.querySelector('.menu'),menu=document.getElementById('menu');
+btn.addEventListener('click',()=>{const a=menu.classList.toggle('aberto');btn.setAttribute('aria-expanded',a)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('aberto');btn.setAttribute('aria-expanded',false)}});
+document.getElementById('ano').textContent=new Date().getFullYear();
+document.querySelectorAll('figure img').forEach(i=>i.addEventListener('error',()=>i.classList.add('sem-img')));
+</script>
+</body>
+</html>
